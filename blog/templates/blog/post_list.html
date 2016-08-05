@@ -1,13 +1,23 @@
-{% extends 'blog/base.html' %}
-
-{% block content %}
-    {% for post in posts %}
-        <div class="post">
-            <div class="date">
-                {{ post.yayinlama_tarihi }}
-            </div>
-            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.baslik }}</a></h1>
-            <p>{{ post.yazi|linebreaksbr }}</p>
+<html>
+    <head>
+        <title>SEDAT's blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">SEDAT's blog</a></h1>
         </div>
-    {% endfor %}
-{% endblock content %}
+
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="">my first blog</a></h2>
+            <p>Çok heyecanlıyım! Bu benim ilk blogum. Ne kadar zevkli bir işmiş bilgisayarlarla uğraşmak. Artık bilgisayar başından kalkmam. </p>
+        </div>
+
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="">my first sharing</a></h2>
+            <p>Çocukluk öldüğünde geriye kalan cesetlere 'yetişkin' adı verilir ve bunlar cehennemin kibarca söylenişi olan 'toplum'daki yerlerini alırlar
+            Brian Aldiss</p>
+        </div>
+    </body>
+</html>
