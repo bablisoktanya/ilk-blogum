@@ -1,13 +1,11 @@
-{% extends 'blog/base.html' %}
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
 
-{% block content %}
-    <div class="post">
-        {% if post.yayinlama_tarihi %}
-            <div class="date">
-                {{ post.yayinlama_tarihi }}
-            </div>
-        {% endif %}
-        <h1>{{ post.baslik }}</h1>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.yayinlama_tarihi }}</p>
+        <h1><a href="">{{ post.baslik }}</a></h1>
         <p>{{ post.yazi|linebreaksbr }}</p>
     </div>
-{% endblock %}
+{% endfor %}
