@@ -1,31 +1,47 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>DJANGO GİRLS BLOGs</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/">Django Girls Blog</a></h1>
+        <body>
+         <div class="page-header">
+            <h1><a href="">DJANGO GİRLS BLOG</a></h1>
+        </div>
+             <a href="https://www.django-cms.org/en/blog/2016/02/16/build-a-website-without-knowing-python-django-part-one/"> <img src="https://www.linuxhelp.com/wp-content/uploads/2016/05/How-To-Create-Basic-Web-Applications-using-Django-Part-II.png"/></a><img src="http://ibrahimgunduz.net/wp-content/uploads/2014/08/django-restframework-logo.png"/>
+        <div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        {{ post.yayinlama_tarihi }}
+                    </div>
+                    <h1><a href="">{{ post.baslik }}</a></h1>
+                    <p>{{ post.yazi|linebreaksbr }}</p>
+                </div>
+                <strong>
+                    Need to sleep happy saint. since death is a semi- sleep state , so should people die every night happy
+                </strong>
+
+            {% endfor %}
         </div>
 
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                {% for post in posts %}
-                    <div class="post">
-                        <div class="date">
-                            {{ post.yayinlama_tarihi }}
-                        </div>
-                        <h1><a href="">{{ post.baslik }}</a></h1>
-                        <p>{{ post.yazi|linebreaksbr }}</p>
-                    </div>
-                {% endfor %}
-                </div>
-            </div>
+    </div>
+</div>
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="https://github.com/settings/profile">İlk Blogum</a></h2>
+            <p>Çok heyecanlıyım! Bu benim ilk blogum. Ne kadar zevkli bir işmiş bilgisayarlarla uğraşmak. Artık bilgisayar başından kalkmam. </p>
+        </div>
+
+        <div>
+            <p>published: 14.06.2014, 12:14</p>
+            <h2><a href="https://www.pythonanywhere.com/user/servanfarasin/webapps/#tab_id_servanfarasin_pythonanywhere_com">İkinci gönderim</a></h2>
+            <p>Bir varmış bir yokmuş, evvel zaman içinde, Ne kadar zevkli bir işmiş bilgisayarlarla uğraşmak. Artık bilgisayar başından kalkmam. kalbur saman içinde, develer tellal iken, pireler berber iken; ben annemin beşiğini tıngır mıngır sallar iken.</p>
         </div>
     </body>
 </html>
