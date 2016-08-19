@@ -21,8 +21,9 @@ body {
     margin-left: 40px;
 }
 
-h1, h2, h3, h4 {
+h1, h3, h4 {
     font-family: 'Lobster', cursive;
+
 }
 
 .date {
@@ -54,4 +55,18 @@ h1, h2, h3, h4 {
 }
 body{
     background-color:#c6e2ff
+}
+ul{
+   color:orange;
+   font-size:30px;
+   font-family:verdana;
+
+}
+h2{
+   color:blue;
+   
+   font-family: arial;
+
+   font-size:55px;
+   
 }
