@@ -21,7 +21,7 @@ body {
     margin-left: 40px;
 }
 
-h1, h3, h4 {
+h3, h4 {
     font-family: 'Lobster', cursive;
 
 }
@@ -70,4 +70,9 @@ h2{
    font-size:55px;
    background-color: white;
    
+}
+h1{
+    color:orange;
+    font-family: 'lubster',cursive;
+    font-size:60px;
 }
